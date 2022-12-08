@@ -33,8 +33,8 @@ const App = () => {
     <>
       <div className="home">
         <div className="header">
-          <button className="bioButton" onClick={() => { updateCard(3) }}>Bio</button>
-          <button className="bioButton" >Resume</button>
+          <div className="bioButton" onClick={() => { updateCard(3) }}>Bio</div>
+          <div className="bioButton" >Resume</div>
         </div>
         <div>
           {transitions((style, item) => (
@@ -42,9 +42,9 @@ const App = () => {
           ))}
         </div>
         <div className="footer">
-          <button className="projectButton" onClick={() => { updateCard(0) }}>Neighborly</button>
-          <button className="projectButton" onClick={() => { updateCard(1) }}>Castle Crusher</button>
-          <button className="projectButton" onClick={() => { updateCard(2) }}>Atelier</button>
+          <div className="projectButton" onClick={() => { updateCard(0) }}>Neighborly</div>
+          <div className="projectButton" onClick={() => { updateCard(1) }}>Castle Crusher</div>
+          <div className="projectButton" onClick={() => { updateCard(2) }}>Atelier</div>
         </div>
       </div>
     </>
