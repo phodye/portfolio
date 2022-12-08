@@ -1,0 +1,41 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 98vh;
+  margin-bottom: 5vh;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.projectOne {
+  width: 90vw;
+  height: 90vh;
+  border: 1px solid black;
+  margin: auto;
+}
+
+.projectTwo {
+  width: 90vw;
+  height: 90vh;
+  border: 1px solid black;
+  margin: auto;
+}
+
+.projectThree {
+  width: 90vw;
+  height: 90vh;
+  border: 1px solid black;
+  margin: auto;
+  transition: all .75s ease-in-out;
+}
