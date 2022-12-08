@@ -1,5 +1,6 @@
 import React from "react";
 import { useTransition, useSpring, animated } from '@react-spring/web';
+import Bio from './Components/Bio.jsx'
 import ProjectOne from './Components/ProjectOne.jsx'
 import ProjectTwo from './Components/ProjectTwo.jsx'
 import ProjectThree from './Components/ProjectThree.jsx'
@@ -7,37 +8,43 @@ import ProjectThree from './Components/ProjectThree.jsx'
 const { useState, useEffect } = React;
 
 const App = () => {
-  const [visible, setVisible] = useState(0)
+  const [visible, setVisible] = useState(3)
 
   const updateCard = (cardIndex) => {
     setVisible(cardIndex)
   }
 
-  const slides = [<ProjectOne />, <ProjectTwo />, <ProjectThree />]
+  const slides = [<ProjectOne />, <ProjectTwo />, <ProjectThree />, <Bio />]
 
   const transitions = useTransition([visible], {
-    from: { opacity: 0, display: "none" },
-    enter: { opacity: 1, display: "block" },
-    leave: { opacity: 0, display: "none" },
-    item: (item) => item
+    from: { x: -2000, opacity: 0, display: "none" },
+    enter: { x: 0, opacity: 1, display: "block" },
+    leave: { x: 2000, opacity: 0, display: "none" },
+    item: (item) => item,
+    config: {
+      mass: 5,
+      friction: 120,
+      tension: 120,
+      duration: 500,
+    },
   });
 
   return (
     <>
       <div className="home">
         <div className="header">
-          <button>Bio</button>
-          <button>Resume</button>
+          <button className="bioButton" onClick={() => { updateCard(3) }}>Bio</button>
+          <button className="bioButton" >Resume</button>
         </div>
         <div>
-        {transitions((style, item) => (
-          <animated.div style={style}>{slides[visible]}</animated.div>
-        ))}
-      </div>
+          {transitions((style, item) => (
+            <animated.div style={style}>{slides[visible]}</animated.div>
+          ))}
+        </div>
         <div className="footer">
-          <button onClick={() => { updateCard(0) }}>Project 1</button>
-          <button onClick={() => { updateCard(1) }}>Project 2</button>
-          <button onClick={() => { updateCard(2) }}>Project 3</button>
+          <button className="projectButton" onClick={() => { updateCard(0) }}>Neighborly</button>
+          <button className="projectButton" onClick={() => { updateCard(1) }}>Castle Crusher</button>
+          <button className="projectButton" onClick={() => { updateCard(2) }}>Atelier</button>
         </div>
       </div>
     </>

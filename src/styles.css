@@ -1,3 +1,12 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #BFDBF7;
+  margin: none;
+}
+
 .home {
   display: flex;
   flex-direction: column;
@@ -18,24 +27,119 @@
   gap: 5px;
 }
 
+.bio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 90vw;
+  height: 85vh;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.bio img {
+  border-radius: 5px;
+  height: 30vh;
+}
+
+.bio p {
+  width: 30vw;
+}
+
+.bio a {
+  color: #022b3aff;
+}
+
+.bio a:visited {
+  color: #022b3aff
+}
+
 .projectOne {
   width: 90vw;
-  height: 90vh;
-  border: 1px solid black;
+  height: 85vh;
   margin: auto;
+  border-radius: 5px;
+  background-color: white;
 }
 
 .projectTwo {
   width: 90vw;
-  height: 90vh;
-  border: 1px solid black;
+  height: 85vh;
   margin: auto;
+  border-radius: 5px;
+  background-color: white;
 }
 
 .projectThree {
   width: 90vw;
-  height: 90vh;
-  border: 1px solid black;
+  height: 85vh;
   margin: auto;
-  transition: all .75s ease-in-out;
+  border-radius: 5px;
+  background-color: white;
 }
+
+.projectButton {
+  width: 15vw;
+  height: 5vh;
+  background-color: #022B3A;
+  color: white;
+  font-size: large;
+  border-radius: 5px;
+}
+
+.projectButton:hover {
+  background-color: white;
+  color: #022B3A;
+}
+
+.bioButton {
+  width: 8vw;
+  height: 4vh;
+  background-color: #022B3A;
+  color: white;
+  font-size: large;
+  border-radius: 5px;
+}
+
+.bioButton:hover {
+  background-color: white;
+  color: #022B3A;
+}
+
+/* https://coolors.co/022b3a-1f7a8c-bfdbf7-e1e5f2-ffffff */
+
+/* CSS HEX */
+/* --gunmetal: #022b3aff;
+--metallic-seaweed: #1f7a8cff;
+--beau-blue: #bfdbf7ff;
+--lavender-web: #e1e5f2ff;
+--white: #ffffffff; */
+
+/* CSS HSL */
+/* --gunmetal: hsla(196, 93%, 12%, 1);
+--metallic-seaweed: hsla(190, 64%, 34%, 1);
+--beau-blue: hsla(210, 78%, 86%, 1);
+--lavender-web: hsla(226, 40%, 92%, 1);
+--white: hsla(0, 0%, 100%, 1); */
+
+/* SCSS HEX */
+/* $gunmetal: #022b3aff;
+$metallic-seaweed: #1f7a8cff;
+$beau-blue: #bfdbf7ff;
+$lavender-web: #e1e5f2ff;
+$white: #ffffffff; */
+
+/* SCSS HSL */
+/* $gunmetal: hsla(196, 93%, 12%, 1);
+$metallic-seaweed: hsla(190, 64%, 34%, 1);
+$beau-blue: hsla(210, 78%, 86%, 1);
+$lavender-web: hsla(226, 40%, 92%, 1);
+$white: hsla(0, 0%, 100%, 1); */
+
+/* SCSS RGB */
+/* $gunmetal: rgba(2, 43, 58, 1);
+$metallic-seaweed: rgba(31, 122, 140, 1);
+$beau-blue: rgba(191, 219, 247, 1);
+$lavender-web: rgba(225, 229, 242, 1);
+$white: rgba(255, 255, 255, 1); */
