@@ -2,13 +2,19 @@ import React from "react";
 
 const { useState, useEffect } = React;
 
-const Bio = ({visible}) => {
+const Bio = ({updateCard}) => {
 
   return (
     <>
         <div className="bio">
           <div>
-            <p>Hello World! <br/><br/> I'm Andrew, I like to work hard and have a good time. I’m a fullstack developer <a href="https://www.andrewdyephoto.com">and a former journalist.</a> I have experience in the MERN stack and with SQL databases. I deeply enjoy learning new technologies. Reach out to me! </p>
+            <h2>Hello World!</h2>
+              <p> I'm Andrew, I like to work hard and have a good time. I’m a fullstack developer and a former <a href="https://www.andrewdyephoto.com"> journalist.</a> I love learning and I can help your company. </p>
+          </div>
+          <div className="bioLinks">
+              <p onClick={() => { updateCard(4) }}>Resume ></p>
+              <p onClick={() => { updateCard(0) }}>Projects ></p>
+              <p>Contact Me ></p>
           </div>
           <img src="https://ca.slack-edge.com/T01J1BRG8E4-U04170QLG1Z-9d3bc73e100d-512"/>
         </div>
