@@ -7,7 +7,7 @@ const ProjectThree = ({visible}) => {
   return (
     <>
       <div className="projectThree">
-        <div>Project Three</div>
+        <div>Atelier</div>
       </div>
     </>
   );

@@ -117,6 +117,9 @@ body {
 }
 
 .resume {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 90vw;
   max-height: 85vh;
   margin: auto;
@@ -127,10 +130,13 @@ body {
 
 .resume img {
   width: 75vw;
+  margin-top: -10vh;
 }
 
 .resume a {
-  color: #00A7E1
+  color: #00A7E1;
+  margin-top: 3vh;
+  z-index: 10;
 }
 
 .resume a:visited {
@@ -169,6 +175,75 @@ body {
 .bioButton:hover {
   background-color: white;
   color: #022B3A;
+}
+
+.projectContainer {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.projectPaneLeft {
+  width: 33%;
+  height: full;
+  background-color: #171717;
+  color: white;
+}
+
+.projectPaneRight {
+  width: 67%;
+  height: full;
+  background-color: #171717;
+  color: white;
+  border-left: 2pt solid white;
+}
+
+.projectDescription {
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin: auto
+}
+
+.projectSlide {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.projectSlide img {
+  width: 80%;
+  margin-top: 2%;
+}
+
+.projectSlide h2 {
+  margin: 1%;
+}
+
+.projectSlide p {
+  margin: 1%;
+}
+
+.slideNavigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navArrow {
+  color: #00A7E1;
+}
+
+.navArrow:hover {
+  color: white;
 }
 
 /* https://coolors.co/022b3a-1f7a8c-bfdbf7-e1e5f2-ffffff */
