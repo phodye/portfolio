@@ -10,10 +10,23 @@ const { useState, useEffect } = React;
 
 const App = () => {
   const [visible, setVisible] = useState(3)
+  const [footerVisible, setFooterVisible] = useState(false)
 
   const updateCard = (cardIndex) => {
     setVisible(cardIndex)
   }
+
+  const updateFooter = () => {
+    if (visible === 3 || visible === 4) {
+      setFooterVisible(false)
+    } else {
+      setFooterVisible(true)
+    }
+  }
+
+  useEffect(() => {
+    updateFooter()
+  }, [visible])
 
   const slides = [<ProjectOne />, <ProjectTwo />, <ProjectThree />, <Bio updateCard={updateCard} />, <Resume updateCard={updateCard}/>]
 
@@ -26,7 +39,7 @@ const App = () => {
       mass: 5,
       friction: 120,
       tension: 120,
-      duration: 400,
+      duration: 300,
     },
   });
 
@@ -36,17 +49,18 @@ const App = () => {
         <div className="header">
           <div className="bioButton" onClick={() => { updateCard(3) }}>Bio</div>
           <div className="bioButton" onClick={() => { updateCard(4) }}>Resume</div>
+          <div className="bioButton" onClick={() => { updateCard(0) }}>Projects</div>
         </div>
-        <div style={{display: "inline-block"}} onClick={() => { updateCard(3) }}>
+        <div style={{display: "inline-block"}}>
           {transitions((style, item) => (
             <animated.div style={style}>{slides[visible]}</animated.div>
           ))}
         </div>
-        <div className="footer">
+        {footerVisible ? <div className="footer">
           <div className="projectButton" onClick={() => { updateCard(0) }}>Neighborly</div>
           <div className="projectButton" onClick={() => { updateCard(1) }}>Castle Crusher</div>
           <div className="projectButton" onClick={() => { updateCard(2) }}>Atelier</div>
-        </div>
+        </div> : null}
       </div>
     </>
   );
