@@ -29,6 +29,7 @@ body {
   gap: 5px;
   background-color: #022B3A;
   margin-bottom: 3vh;
+  padding:10px;
 }
 
 .footer {
@@ -36,7 +37,7 @@ body {
   justify-content: center;
   gap: 5px;
   background-color: black;
-  margin-top: 3vh;
+  margin-top: 1vh;
 }
 
 .bio {
@@ -94,7 +95,7 @@ body {
 
 .projectOne {
   width: 90vw;
-  height: 85vh;
+  height: 83vh;
   margin: auto;
   border-radius: 5px;
   background-color: white;
@@ -102,7 +103,7 @@ body {
 
 .projectTwo {
   width: 90vw;
-  height: 85vh;
+  height: 83vh;
   margin: auto;
   border-radius: 5px;
   background-color: white;
@@ -110,7 +111,7 @@ body {
 
 .projectThree {
   width: 90vw;
-  height: 85vh;
+  height: 83vh;
   margin: auto;
   border-radius: 5px;
   background-color: white;
@@ -137,6 +138,7 @@ body {
   color: #00A7E1;
   margin-top: 3vh;
   z-index: 10;
+  font-size: larger;
 }
 
 .resume a:visited {
@@ -152,16 +154,20 @@ body {
   justify-content: center;
   color: white;
   font-size: large;
-  cursor: default;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .projectButton:hover {
-  background-color: white;
-  color: #022B3A;
+  color: #00A7E1;
+  font-size: x-large;
+  transition: 0.3s;
 }
 
 .bioButton {
-  width: 8vw;
+  width: fit-content;
+  margin-left: 1vw;
+  margin-right: 1vw;
   height: 4vh;
   background-color: #022B3A;
   display: flex;
@@ -169,18 +175,20 @@ body {
   justify-content: center;
   color: white;
   font-size: large;
-  cursor: default;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .bioButton:hover {
-  background-color: white;
-  color: #022B3A;
+  color: #00A7E1;
+  transition: 0.3s;
 }
 
 .projectContainer {
   display: flex;
   height: 100%;
   width: 100%;
+  border-radius: 5%;
 }
 
 .projectPaneLeft {
@@ -206,6 +214,20 @@ body {
   align-content: center;
   text-align: center;
   margin: auto
+}
+
+.projectDescription a {
+  margin-top: 5vh;
+  color: #00A7E1;
+  font-size: larger;
+}
+
+.projectDescription a:visited {
+  color: #00A7E1;
+}
+
+.projectDescription a:hover {
+  color: white;
 }
 
 .projectSlide {
@@ -240,10 +262,13 @@ body {
 
 .navArrow {
   color: #00A7E1;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .navArrow:hover {
   color: white;
+  transition: 0.3s;
 }
 
 /* https://coolors.co/022b3a-1f7a8c-bfdbf7-e1e5f2-ffffff */

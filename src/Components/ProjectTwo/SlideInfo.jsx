@@ -1,4 +1,5 @@
 import React from "react";
+import CCInfo from "../../Assets/CCInfo.png";
 import { ArrowLeftCircle, ArrowRightCircle } from 'react-feather';
 
 const { useState, useEffect } = React;
@@ -10,7 +11,7 @@ const SlideInfo = ({ cycleSlide, currentSlide }) => {
       <div className="projectSlide">
         <div className="slideNavigation">
           <ArrowLeftCircle size={48} className="navArrow" onClick={()=>{cycleSlide(currentSlide - 1)}} />
-          <img src="https://drive.google.com/uc?id=1C2KzSg6W0itl6zqhaSlOkuvlhBrd0q-6" />
+          <img src={CCInfo} />
           <ArrowRightCircle size={48} className="navArrow" onClick={()=>{cycleSlide(currentSlide + 1)}} />
         </div>
         <h2>Information</h2>

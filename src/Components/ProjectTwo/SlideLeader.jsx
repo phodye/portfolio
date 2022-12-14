@@ -1,4 +1,5 @@
 import React from "react";
+import CCLeader from "../../Assets/CCLeader.png";
 import { ArrowLeftCircle, ArrowRightCircle } from 'react-feather';
 
 const { useState, useEffect } = React;
@@ -10,7 +11,7 @@ const SlideLeader = ({ cycleSlide, currentSlide }) => {
       <div className="projectSlide">
         <div className="slideNavigation">
           <ArrowLeftCircle size={48} className="navArrow" onClick={()=>{cycleSlide(currentSlide - 1)}} />
-          <img src="https://drive.google.com/uc?id=14NBJi3rj8o3vzSSi9uD_oClU_u8S-0ay" />
+          <img src={CCLeader} />
           <ArrowRightCircle size={48} className="navArrow" onClick={()=>{cycleSlide(currentSlide + 1)}} />
         </div>
         <h2>Leader Board</h2>

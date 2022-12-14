@@ -1,4 +1,5 @@
 import React from "react";
+import CCHome from "../../Assets/CCHome.png";
 import { ArrowLeftCircle, ArrowRightCircle } from 'react-feather';
 
 const { useState, useEffect } = React;
@@ -10,7 +11,7 @@ const SlideHome = ({ cycleSlide, currentSlide }) => {
       <div className="projectSlide">
         <div className="slideNavigation">
           <ArrowLeftCircle size={48} className="navArrow" onClick={()=>{cycleSlide(currentSlide - 1)}} />
-          <img src="https://drive.google.com/uc?id=1e7MvI06au8TujphRo9Xas4tGvjAVV3jX" />
+          <img src={CCHome} />
           <ArrowRightCircle size={48} className="navArrow" onClick={()=>{cycleSlide(currentSlide + 1)}} />
         </div>
         <h2>Home Screen</h2>
