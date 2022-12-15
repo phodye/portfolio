@@ -27,17 +27,6 @@ const config = {
         test: /\.(png|svg|webp|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
-      {
-        test: /\.(png)$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              mimetype: 'image/png'
-            }
-          }
-        ]
-      }
     ]
   },
   devServer: {
