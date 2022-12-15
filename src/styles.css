@@ -117,6 +117,10 @@ body {
   background-color: white;
 }
 
+.projectHolder {
+  height: 83vh;
+}
+
 .resume {
   display: flex;
   flex-direction: column;
@@ -217,9 +221,14 @@ body {
 }
 
 .projectDescription a {
-  margin-top: 5vh;
   color: #00A7E1;
   font-size: larger;
+  margin-bottom: 1vh;
+  transition: 0.3s;
+  word-spacing: .01vw;
+}
+.projectDescription a:first-of-type {
+  margin-top: 2vh;
 }
 
 .projectDescription a:visited {
@@ -228,6 +237,7 @@ body {
 
 .projectDescription a:hover {
   color: white;
+  transition: 0.3s;
 }
 
 .projectSlide {

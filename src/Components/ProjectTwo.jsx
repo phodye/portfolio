@@ -12,14 +12,11 @@ const ProjectTwo = ({ visible }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const transitions = useTransition([visible], {
-    from: { x: 2000, opacity: 0, display: "none" },
-    enter: { x: 0, opacity: 1, display: "block" },
-    leave: { x: -2000, opacity: 0, display: "none" },
+    from: {opacity: 0, },
+    enter: {opacity: 1, },
+    leave: {opacity: 0, },
     item: (item) => item,
     config: {
-      mass: 5,
-      friction: 120,
-      tension: 120,
       duration: 300,
     },
   });

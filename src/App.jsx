@@ -51,7 +51,7 @@ const App = () => {
           <div className="bioButton" onClick={() => { updateCard(4) }}>Resume</div>
           <div className="bioButton" onClick={() => { updateCard(0) }}>Projects</div>
         </div>
-        <div style={{display: "inline-block"}}>
+        <div className="projectHolder">
           {transitions((style, item) => (
             <animated.div style={style}>{slides[visible]}</animated.div>
           ))}
