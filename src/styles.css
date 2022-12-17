@@ -281,6 +281,42 @@ body {
   transition: 0.3s;
 }
 
+.contact {
+  width: 90vw;
+  height: 83vh;
+  margin: auto;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+}
+
+.contact h2 {
+  text-align: center;
+}
+
+.contact form {
+  background: black;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   width: 30vw;
+   gap: 5vh;
+   margin: auto;
+}
+
+.contact input {
+  height: 5vh;
+}
+
+.contact textarea {
+  height: 15vh;
+}
+
+.contact button {
+  width: 12vw;
+  margin: auto;
+}
+
 /* https://coolors.co/022b3a-1f7a8c-bfdbf7-e1e5f2-ffffff */
 
 /* CSS HEX */

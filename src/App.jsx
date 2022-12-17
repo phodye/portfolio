@@ -5,6 +5,7 @@ import Resume from './Components/Resume.jsx'
 import ProjectOne from './Components/ProjectOne.jsx'
 import ProjectTwo from './Components/ProjectTwo.jsx'
 import ProjectThree from './Components/ProjectThree.jsx'
+import Contact from './Components/Contact.jsx'
 
 const { useState, useEffect } = React;
 
@@ -17,7 +18,7 @@ const App = () => {
   }
 
   const updateFooter = () => {
-    if (visible === 3 || visible === 4) {
+    if (visible === 3 || visible === 4 || visible === 5) {
       setFooterVisible(false)
     } else {
       setFooterVisible(true)
@@ -28,7 +29,7 @@ const App = () => {
     updateFooter()
   }, [visible])
 
-  const slides = [<ProjectOne />, <ProjectTwo />, <ProjectThree />, <Bio updateCard={updateCard} />, <Resume updateCard={updateCard}/>]
+  const slides = [<ProjectOne />, <ProjectTwo />, <ProjectThree />, <Bio updateCard={updateCard} />, <Resume updateCard={updateCard}/>, <Contact updateCard={updateCard}/>]
 
   const transitions = useTransition([visible], {
     from: { x: 2000, opacity: 0, display: "none" },

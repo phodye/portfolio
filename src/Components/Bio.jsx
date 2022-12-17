@@ -14,7 +14,7 @@ const Bio = ({updateCard}) => {
           <div className="bioLinks">
               <p onClick={() => { updateCard(4) }}>Resume ></p>
               <p onClick={() => { updateCard(0) }}>Projects ></p>
-              <p>Contact Me ></p>
+              <p onClick={() => { updateCard(5) }}>Contact Me ></p>
           </div>
           <img src="https://ca.slack-edge.com/T01J1BRG8E4-U04170QLG1Z-9d3bc73e100d-512"/>
         </div>
