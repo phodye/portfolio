@@ -317,6 +317,11 @@ body {
   margin: auto;
 }
 
+.contact button:hover {
+  color:white;
+  background-color: black;
+}
+
 /* https://coolors.co/022b3a-1f7a8c-bfdbf7-e1e5f2-ffffff */
 
 /* CSS HEX */
